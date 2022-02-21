@@ -31,7 +31,7 @@ function App() {
    
   return (
     <div className="App">
-      <Greet name='Dulat' messageCount={20} isLoggedIn={false}/>
+      <Greet name='Dulat'  isLoggedIn={false}/>
       <Person  name={personName}/>
       <PersonList names={nameList}/>
       <Status status='loading'/>
