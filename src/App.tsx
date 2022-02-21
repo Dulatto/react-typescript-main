@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Button } from './components/Button';
 import {Greet} from './components/Greet';
 import { Heading } from './components/Heading';
 import { Oscar } from './components/Oscar';
@@ -31,14 +32,19 @@ function App() {
    
   return (
     <div className="App">
-      <Greet name='Dulat'  isLoggedIn={false}/>
+      <Button 
+         handleClick={(event, id)=>{
+        console.log('Button clicked', event, id)
+      }} 
+      />
+      {/* <Greet name='Dulat'  isLoggedIn={false}/>
       <Person  name={personName}/>
       <PersonList names={nameList}/>
       <Status status='loading'/>
       <Heading>Placeholder text</Heading>
       <Oscar>
         <Heading>Oscar goes to leonardo Dicaprio</Heading>
-      </Oscar>
+      </Oscar> */}
     </div>
   );
 }
