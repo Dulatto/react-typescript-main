@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Button } from './components/Button';
+import { Container } from './components/Container';
 import {Greet} from './components/Greet';
 import { Heading } from './components/Heading';
 import { Input } from './components/Input';
@@ -33,13 +34,14 @@ function App() {
    
   return (
     <div className="App">
-      <Button 
+      <Container styles={{border: '1px solid black', padding: '1rem'}} />
+      {/* <Button 
          handleClick={(event, id)=>{
         console.log('Button clicked', event, id)
       }} 
       />
       <Input value='' handleChange={(event) => console.log(event)} />
-      {/* <Greet name='Dulat'  isLoggedIn={false}/>
+      <Greet name='Dulat'  isLoggedIn={false}/>
       <Person  name={personName}/>
       <PersonList names={nameList}/>
       <Status status='loading'/>
