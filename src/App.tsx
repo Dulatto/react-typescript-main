@@ -9,6 +9,8 @@ import { Oscar } from './components/Oscar';
 import {Person} from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
+import {ThemeContextProvider} from './components/context/ThemeContext'
+import {Box} from './components/context/Box'
 
 function App() {
 
@@ -34,8 +36,8 @@ function App() {
    
   return (
     <div className="App">
-      <Container styles={{border: '1px solid black', padding: '1rem'}} />
-      {/* <Button 
+       {/*<Container styles={{border: '1px solid black', padding: '1rem'}} />
+      <Button 
          handleClick={(event, id)=>{
         console.log('Button clicked', event, id)
       }} 
@@ -49,6 +51,9 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to leonardo Dicaprio</Heading>
       </Oscar> */}
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
