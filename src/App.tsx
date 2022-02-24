@@ -11,6 +11,8 @@ import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import {ThemeContextProvider} from './components/context/ThemeContext'
 import {Box} from './components/context/Box'
+import {UserContextProvider} from './components/context/UseContext'
+import {User} from './components/context/User'
 
 function App() {
 
@@ -50,10 +52,13 @@ function App() {
       <Heading>Placeholder text</Heading>
       <Oscar>
         <Heading>Oscar goes to leonardo Dicaprio</Heading>
-      </Oscar> */}
+      </Oscar> 
       <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider>*/}
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
